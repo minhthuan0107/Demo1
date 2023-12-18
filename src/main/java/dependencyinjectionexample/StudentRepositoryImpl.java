@@ -9,7 +9,7 @@ import java.util.List;
 public class StudentRepositoryImpl implements StudentRepository {
     private List<Student> students;
     @PostConstruct
-    public List<Student> findAll(){
+    public void initData(){
         students = new ArrayList<>();
         Student student1 = new Student();
         student1.setId(1L);
@@ -24,7 +24,9 @@ public class StudentRepositoryImpl implements StudentRepository {
         student2.setAddress("Ha Noi");
      students.add(student1);
      students.add(student2);
-     return students;
+    }
+    public List<Student> findAll(){
+        return students;
     }
     @Override
     public Student findById(long id) {
