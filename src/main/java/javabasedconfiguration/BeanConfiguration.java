@@ -9,6 +9,8 @@ import pojobeans.AccountServiceImpl;
 
 @Configuration
 public class BeanConfiguration {
+
+
     @Bean
     public AccountService accountService(){
         AccountServiceImpl bean = new AccountServiceImpl();
